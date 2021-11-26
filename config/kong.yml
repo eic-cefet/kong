@@ -1,0 +1,13 @@
+_format_version: "2.1"
+
+services:
+  - name: exchange-register
+    url: https://exchange-register-api-xbs5lkeuja-uc.a.run.app
+    routes:
+      - name: get-exchange-rate
+        paths:
+          - /v1/exchange-rate
+    plugins:
+      - name: go-powered-by
+        config:
+          poweredby: "EIC Kong"
