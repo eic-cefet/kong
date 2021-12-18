@@ -1,0 +1,16 @@
+_format_version: "2.1"
+
+services:
+  - name: simple-node
+    url: http://host.docker.internal:3000
+    routes:
+      - name: index
+        paths:
+          - /api/v1/simple-node
+    plugins:
+      - name: go-powered-by
+        config:
+          poweredby: "EIC Kong"
+      - name: go-seminarios-address
+        config:
+          seminariosaddress: "https://seminarios-eic.com"
