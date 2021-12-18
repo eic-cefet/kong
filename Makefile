@@ -1,6 +1,6 @@
 all: build-plugins
 
-build-plugins: build-plugin-go-powered-by build-plugin-go-seminarios-address
+build-plugins: build-plugin-go-powered-by build-plugin-go-seminaries-address
 
 build-plugin-go-powered-by:
 	cd plugins/go-powered-by && \
@@ -11,13 +11,13 @@ build-plugin-go-powered-by:
 	mv ./go-powered-by ../builds/go-powered-by
 
 
-build-plugin-go-seminarios-address:
-	cd plugins/go-seminarios-address && \
+build-plugin-go-seminaries-address:
+	cd plugins/go-seminaries-address && \
 	go mod download && \
 	go mod tidy && \
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -a -v -o ./go-seminarios-address main.go && \
-	chmod +x go-seminarios-address && \
-	mv ./go-seminarios-address ../builds/go-seminarios-address
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -a -v -o ./go-seminaries-address main.go && \
+	chmod +x go-seminaries-address && \
+	mv ./go-seminaries-address ../builds/go-seminaries-address
 
 up:
 	docker-compose up

@@ -1,16 +1,16 @@
 _format_version: "2.1"
 
 services:
-  - name: simple-node
+  - name: health-check
     url: http://host.docker.internal:3000
     routes:
-      - name: index
+      - name: health-check
         paths:
-          - /api/v1/simple-node
+          - /status
     plugins:
       - name: go-powered-by
         config:
           poweredby: "EIC Kong"
-      - name: go-seminarios-address
+      - name: go-seminaries-address
         config:
-          seminariosaddress: "https://seminarios-eic.com"
+          seminariosaddress: "https://eic-seminarios.com"
