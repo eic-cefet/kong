@@ -13,7 +13,7 @@ services:
           poweredby: "EIC Kong"
       - name: go-seminaries-address
         config:
-          seminariosaddress: "http"
+          seminariosaddress: "https://eic-seminarios.com"
   - name: authy
     url: http://host.docker.internal:3001
     routes:
@@ -26,4 +26,4 @@ services:
               poweredby: "EIC Kong"
           - name: go-seminaries-address
             config:
-              seminariosaddress: "http"
+              seminariosaddress: "https://eic-seminarios.com"
